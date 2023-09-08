@@ -32,9 +32,8 @@ class Player {
     }
 
     takeItem(itemName) {
-
-        // Fill this in
-
+        this.currentRoom.items.pop();
+        this.items.push(itemName)
     }
 
     dropItem(itemName) {
@@ -46,12 +45,14 @@ class Player {
         // Fill this in
 
     }
-
-    getItemByName(name) {
-
-        // Fill this in
+    
+    getItemByName(name) { // 'scissors'
+        return this.items.find(item => {
+            return item.name === name;
+        })
     }
 }
+
 
 module.exports = {
   Player,
