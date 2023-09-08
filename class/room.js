@@ -4,7 +4,7 @@ class Room {
         this.name = name;
         this.description = description;
         this.exits = {};
-        this.items = [];
+        this.items = []; //['rock']
     }
 
     printRoom() {
